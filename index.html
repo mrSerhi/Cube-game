@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,43 @@
     <title>Cube-game</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
-    <h1>change settings of project</h1>
+    <div class="wrapper">
+        <div class="player-panel player-first">
+            <h1 id="name-0" class="player-name">Player_1</h1>
+            <div id="scope-0" class="player-score">0</div>
+            <div class="player-box">
+                <h3 class="player-box__label">Current</h3>
+                <div id="current-0" class="player-box__current-score">0</div>
+            </div>
+        </div>
+        <div class="btn-block">
+            <button type="button" class="btn btn-new">
+                <i class="fas fa-play"></i>
+                NEW GAME
+            </button>
+            <div class="btn-block__dice">
+                <img class="btn-block__dice-image" src="./images/dice-5.png" alt="Dice">
+            </div>
+            <button type="button" class="btn btn-roll">
+                <i class="fas fa-sync-alt"></i>
+                ROLL DICE
+            </button>
+            <button type="button" class="btn btn-hold">
+                <i class="far fa-handshake"></i>
+                HOLD
+            </button>
+        </div>
+        <div class="player-panel player-second">
+            <h1 id="name-1" class="player-name">Player_2</h1>
+            <div id="scope-1" class="player-score">0</div>
+            <div class="player-box">
+                <h3 class="player-box__label">Current</h3>
+                <div id="current-1" class="player-box__current-score">0</div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
