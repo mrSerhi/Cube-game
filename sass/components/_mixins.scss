@@ -1,0 +1,20 @@
+//to 
+@mixin font-family-body-change($font: 'Orange', $weight: normal) {
+    font-family: $font, sans-serif;
+    font-weight: $weight;
+}
+
+@mixin font-family-head-change($font: 'Chocolate', $weight: bold ) {
+    font-family: $font, sans-serif;
+    font-weight: $weight;
+}
+
+@mixin font-family-desc-change($font: 'Chocolate', $weight: 300 ) {
+    font-family: $font, sans-serif;
+    font-weight: $weight;
+}
+
+@mixin font-family-other-change($font: 'Chocolate', $weight: normal ) {
+    font-family: $font, sans-serif;
+    font-weight: $weight;
+}

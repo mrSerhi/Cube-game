@@ -1,0 +1,27 @@
+@import './components/fonts';
+@import './components/mixins';
+
+
+
+// common settings
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include font-family-body-change;
+    height: 100vh;
+    background: rgb(192, 62, 62);
+    color: white;
+}
+
+h1,h1,h2,h4,h5,h6 {
+    @include font-family-head-change;
+}
+
+p, div {
+    @include font-family-desc-change;
+}
+

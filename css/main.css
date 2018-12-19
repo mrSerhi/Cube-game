@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Chocolate', sans-serif;
+  src: '../../fonts/Chocolate Covered Raindrops.ttf';
+  font-weight: normal; }
+@font-face {
+  font-family: 'Chocolate', sans-serif;
+  src: '../../fonts/chocolate Covered Raindrops Hollow.ttf';
+  font-weight: 300; }
+@font-face {
+  font-family: 'Chocolate', sans-serif;
+  src: '../../fonts/chocolate Covered Raindrops BOLD.ttf';
+  font-weight: bold; }
+@font-face {
+  font-family: 'Orange', sans-serif;
+  src: '../../fonts/orange juice 2.0.ttf';
+  font-weight: normal; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Orange", sans-serif;
+  font-weight: normal;
+  height: 100vh;
+  background: #c03e3e;
+  color: white; }
+
+h1, h1, h2, h4, h5, h6 {
+  font-family: "Chocolate", sans-serif;
+  font-weight: bold; }
+
+p, div {
+  font-family: "Chocolate", sans-serif;
+  font-weight: 300; }
+
+/*# sourceMappingURL=main.css.map */
