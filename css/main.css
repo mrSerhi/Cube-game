@@ -1,3 +1,4 @@
+@import "https://use.fontawesome.com/releases/v5.6.1/css/all.css";
 @font-face {
   font-family: 'Chocolate', sans-serif;
   src: '../../fonts/Chocolate Covered Raindrops.ttf';
@@ -24,14 +25,28 @@ body {
   font-weight: normal;
   height: 100vh;
   background: #c03e3e;
-  color: white; }
+  color: white;
+  font-size: 1rem; }
 
-h1, h1, h2, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Chocolate", sans-serif;
   font-weight: bold; }
 
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.5rem; }
+
+h4, h5, h6 {
+  font-size: 1.2rem; }
+
 p, div {
   font-family: "Chocolate", sans-serif;
-  font-weight: 300; }
+  font-weight: 300;
+  font-size: 1.1rem; }
 
 /*# sourceMappingURL=main.css.map */

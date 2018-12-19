@@ -1,4 +1,6 @@
+@import 'https://use.fontawesome.com/releases/v5.6.1/css/all.css'; // font-awesome 5
 @import './components/fonts';
+@import './components/variables';
 @import './components/mixins';
 
 
@@ -15,13 +17,31 @@ body {
     height: 100vh;
     background: rgb(192, 62, 62);
     color: white;
+    font-size: $init-size;
 }
 
-h1,h1,h2,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6 {
     @include font-family-head-change;
+}
+
+h1 {
+    font-size: $init-size * 3;
+}
+
+h2 {
+    font-size: $init-size * 2;   
+}
+
+h3 {
+    font-size: $init-size * 1.5;     
+}
+
+h4,h5,h6 {
+    font-size: $init-size * 1.2;     
 }
 
 p, div {
     @include font-family-desc-change;
+    font-size: $init-size * 1.1;
 }
 
