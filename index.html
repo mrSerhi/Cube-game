@@ -11,18 +11,20 @@
 
 <body>
     <div class="wrapper">
-        <div class="player-panel player-first">
-            <h1 id="name-0" class="player-name">Player_1</h1>
+        <!-- first player block on the left side -->
+        <div class="player-panel player-first active">
+            <h1 id="name-0" class="player-name">Player №1</h1>
             <div id="scope-0" class="player-score">0</div>
             <div class="player-box">
                 <h3 class="player-box__label">Current</h3>
                 <div id="current-0" class="player-box__current-score">0</div>
             </div>
         </div>
-        <div class="btn-block">
-            <button type="button" class="btn btn-new">
-                <i class="fas fa-play"></i>
-                NEW GAME
+        <!-- block which will be in the center with buttons and img container-->
+        <div class="btn-block"">
+            <button type=" button" class="btn btn-new">
+            <i class="fas fa-play"></i>
+            NEW GAME
             </button>
             <div class="btn-block__dice">
                 <img class="btn-block__dice-image" src="./images/dice-5.png" alt="Dice">
@@ -36,8 +38,9 @@
                 HOLD
             </button>
         </div>
-        <div class="player-panel player-second">
-            <h1 id="name-1" class="player-name">Player_2</h1>
+        <!-- second player block on the right side -->
+        <div class="player-panel player-second ">
+            <h1 id="name-1" class="player-name">Player №2</h1>
             <div id="scope-1" class="player-score">0</div>
             <div class="player-box">
                 <h3 class="player-box__label">Current</h3>

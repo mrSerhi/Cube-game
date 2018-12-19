@@ -2,6 +2,7 @@
 @import './components/fonts';
 @import './components/variables';
 @import './components/mixins';
+@import './components/keyframes';
 
 
 
@@ -12,15 +13,21 @@
     box-sizing: border-box;
 }
 
+html,
 body {
     @include font-family-body-change;
-    height: 100vh;
-    background: rgb(192, 62, 62);
-    color: white;
+    height: 100%;
+    // background: rgb(192, 62, 62);
+    color: $black;
     font-size: $init-size;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     @include font-family-head-change;
 }
 
@@ -29,19 +36,161 @@ h1 {
 }
 
 h2 {
-    font-size: $init-size * 2;   
+    font-size: $init-size * 2;
 }
 
 h3 {
-    font-size: $init-size * 1.5;     
+    font-size: $init-size * 1.5;
 }
 
-h4,h5,h6 {
-    font-size: $init-size * 1.2;     
+h4,
+h5,
+h6 {
+    font-size: $init-size * 1.2;
 }
 
-p, div {
+p,
+div {
     @include font-family-desc-change;
     font-size: $init-size * 1.1;
 }
 
+.btn {
+    display: block;
+    @include font-family-other-change;
+    padding: .5rem 1.2rem;
+    border: none;
+    background: none;
+    font-size: $init-size * 1.2;
+    color: lighten($black, 50%);
+    transition: all .3s 0s ease-out;
+
+    >i {
+        font-size: 1.4rem;
+        color: darken($red, 10%);
+    }
+
+    &:hover,
+    &:active {
+        cursor: pointer;
+        color: lighten($black, 40%);
+
+        >i {
+            animation: icon-scale .3s ease-out 0s 3;
+        }
+    }
+
+    &.btn-roll {
+
+        &:hover,
+        &:active {
+            >i {
+                animation: icon-rotate .3s ease-out 0s 3;
+            }
+        }
+    }
+
+    &.btn-hold {
+
+        &:hover,
+        &:active {
+            >i {
+                animation: icon-transition .3s ease-out 0s 3;
+            }
+        }
+    }
+}
+
+.active {
+    background: lighten($gray, 45%) !important;
+
+    .player-name {
+        position: relative;
+        color: lighten($black, 40%) !important;
+
+        &::after {
+            position: absolute;
+            content: '\2022';
+            // top: 0;
+            left: 50%;
+            bottom: 90%;
+            font-size: $init-size * 3;
+            color: darken($red, 10%);
+        }
+    }
+}
+
+.wrapper {
+    position: relative;
+    @include display-flex-box;
+    flex-flow: row nowrap;
+    // margin: .5rem 1rem;
+    height: 100vh;
+
+    .player-panel {
+        // visibility: hidden;
+        @include display-flex-box;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        max-width: 50%;
+        width: 50%;
+        text-align: center;
+        background: $white;
+
+        .player-name {
+            color: lighten($gray, 30%);
+        }
+
+        .player-score {
+            font-size: $init-size * 6;
+            color: $red;
+        }
+
+        .player-box {
+            @include display-flex-box;
+            flex-flow: column nowrap;
+            justify-content: space-evenly;
+            width: $player-box-width;
+            height: 6rem;
+            margin: 0 auto;
+            background: darken($red, 10%);
+
+            .player-box__label {
+                @include font-family-body-change('Orange', 300);
+                font-size: $init-size;
+            }
+
+            .player-box__current-score {
+                font-size: $init-size * 2;
+                color: $white;
+            }
+        }
+    }
+
+    .btn-block {
+        position: absolute;
+        @include display-flex-box;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        height: 100vh;
+        top: 50%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+
+
+        .btn-block__dice {
+            max-width: 150px;
+            max-height: 150px;
+            box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+
+            .btn-block__dice-image {
+                width: 100%;
+                height: 100%;
+                vertical-align: middle;
+            }
+        }
+    }
+}
