@@ -26,5 +26,19 @@ document.getElementsByClassName('btn-roll')[0].addEventListener('click', functio
     document.getElementsByClassName('btn-block__dice')[0].style.visibility = 'visible';
     var cubeImg = document.getElementsByClassName('btn-block__dice-image')[0];
     cubeImg.src = './images/dice-' + dice + '.png';
+    if (dice !== 1) {
+        roundScore += dice;
+        document.getElementById('current-' + activePlayer).textContent = roundScore;
+    } else {
+        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+        roundScore = 0;
+        document.getElementById('current-0').textContent = '0';
+        document.getElementById('current-1').textContent = '0';
+        document.getElementsByClassName('player-second')[0].classList.toggle('active');
+        document.getElementsByClassName('player-first')[0].classList.toggle('active');
+        document.body.getElementsByClassName('btn-block__dice')[0].style.visibility = 'hidden';
+    }
 });
 
+document.getElementsByClassName('btn-hold')[0].addEventListener('click', function() {
+});
