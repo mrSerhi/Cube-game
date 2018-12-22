@@ -170,7 +170,8 @@ div {
     top: 50%;
     left: 50%;
     right: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    z-index: 1; }
     .wrapper .btn-block .btn-block__dice {
       max-width: 150px;
       max-height: 150px;
